@@ -6,10 +6,13 @@ verify_ssl = true
 [packages]
 click = "*"
 pip = "==18.0"
+aiohttp = "*"
 
 [dev-packages]
 pytest = "*"
 pytest-cov = "*"
+pytest-asyncio = "*"
+aiohttp-devtools = "*"
 pycodestyle = "*"
 mypy = "*"
 pylint = "*"
