@@ -16,6 +16,7 @@ pytest-cov = "*"
 <<<<<<< HEAD
 black = "==19.3b0"
 pytest-asyncio = "*"
+pytest-aiohttp = "*"
 aiohttp-devtools = "*"
 pycodestyle = "*"
 mypy = "*"
