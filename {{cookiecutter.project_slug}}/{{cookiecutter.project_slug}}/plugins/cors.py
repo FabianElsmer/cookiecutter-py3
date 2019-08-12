@@ -1,15 +1,14 @@
 import logging
 
+from aiohttp import web
 import aiohttp_cors
 
 LOG = logging.getLogger(__name__)
 
 
-async def enable(app):
-    """ Configures a default CORS resource for every origin and route
-    :param app:
-    :return:
-    """
+async def enable(app: web.Application) -> None:
+    """Configures a default CORS resource for every origin and route"""
+
     cors_config = app.config.get('cors')
 
     if not cors_config:
