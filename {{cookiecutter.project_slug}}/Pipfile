@@ -8,6 +8,7 @@ click = "*"
 pip = "==18.0"
 aiohttp = "*"
 aiohttp_cors = "*"
+motor="*"
 prometheus-async = "*"
 yacm = "*"
 

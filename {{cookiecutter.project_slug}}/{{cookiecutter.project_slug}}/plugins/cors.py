@@ -31,4 +31,5 @@ async def enable(app: web.Application) -> None:
         LOG.debug('add CORS for route %s', route)
         cors.add(route)
 
+    app['cors_config'] = cors
     yield
