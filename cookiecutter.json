@@ -7,6 +7,7 @@
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.1.0",
+  "database": ["mongodb", "none"],
   "use_pytest": "y",
   "add_pyup_badge": "n",
   "command_line_interface": ["Click", "No command-line interface"],
