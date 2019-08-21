@@ -12,4 +12,14 @@ cors:
 #    it can be helpful to allow ALL origins
 #    - *
 
+logging:
+{% if cookiecutter.logging|lower == 'logging_py3' %}
+    # Listen and apply live config changes
+    listen: True
 
+    # Add your custom logging config here
+    # logging_py3 provides a solid default config and advanced logging features
+    # See: https://github.com/FabianElsmer/logging-py3
+{% else %}
+    level: DEBUG
+{% endif %}

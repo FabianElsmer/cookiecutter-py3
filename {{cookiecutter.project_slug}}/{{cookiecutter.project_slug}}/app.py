@@ -1,3 +1,4 @@
+from .setup_logging import setup_logging
 import logging
 
 import yacm
@@ -23,6 +24,8 @@ class Application(web.Application):
         else:
             self.config = extra_config
 
+        setup_logging(self.config.get('logging'))
+
         self.load_plugins()
         routes.register(self)
 
@@ -39,7 +42,6 @@ class Application(web.Application):
 # used for aiohttp-devtools
 def create_app(loop=None, extra_config=None):
     if loop is None:
-        logging.basicConfig(level=logging.DEBUG)
         loop = asyncio.get_event_loop()
 
     return Application(loop=loop, extra_config=extra_config)
