@@ -7,6 +7,11 @@ verify_ssl = true
 click = "*"
 pip = "==18.0"
 coloredlogs = "==10.0"
+{% if cookiecutter.logging|lower == 'logging_py3' %}
+
+logging_py3 = "*"
+
+{% endif %}
 
 [dev-packages]
 pytest = "*"
